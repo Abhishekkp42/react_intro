@@ -2,11 +2,45 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  
+  const brands= [
+    {brands:"Android"},
+    {brands: "Blackberry"},
+     {brands: "iPhone"},
+     {brands: "Windows phone"}
+    ];
+
+    const manufac= [
+      {name: "Samsung"},
+      {name: "HTC"},
+      {name: "Micromax"},
+      {name: "Apple"}
+    ]
+
   return (
-    <div className="App">
-      <h1>Hello Everyone</h1>
+    <div>
+      <h1>{"Mobile Operating System"}</h1>
+
+      {brands.map((brands) => {
+        return <UnorderedComponent brands= {brands.brands} />;
+      })}
+
+      <h1>{"Mobile Manufacturers"}</h1>
+
+      {manufac.map((el) => {
+        return <UnorderedComponent brands= {el.name} />;
+      })}    
     </div>
+    
   );
+}
+
+function UnorderedComponent({brands}) {
+  return (
+      <ul>
+        <li>{brands}</li>
+        </ul>
+  )
 }
 
 export default App;
