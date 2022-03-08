@@ -38,7 +38,7 @@ function App() {
 function UnorderedComponent({brands}) {
   return (
       <ul>
-        <li>{brands}</li>
+        <li style={{listStyle: "square"}}>{brands}</li>
         </ul>
   )
 }
